@@ -1,0 +1,28 @@
+<style>
+ div#ichingcoins {
+	 background-image: url("/assets/img/iching/bg.gif");
+	 width: 55px;
+	 height: 67px;
+	 font-size: 5px;
+ }
+
+div#ichingcoins img {
+	margin-top: 2px;
+	float: left;
+	margin-left: 18px;
+}
+
+div#ichingcoins img:first-child {
+	margin-top: 12px;
+}
+
+</style>
+<div id="ichingcoins"></div>
+<script>
+  var iching = document.getElementById("ichingcoins");
+  for (var i = 0; i < 6; i++) {
+	var image = new Image(21, 5);
+    image.src = "/assets/img/iching/" + ["open", "close"][Math.floor(Math.random() * 2)] + ".gif";
+	iching.appendChild(image);
+  }
+</script>
